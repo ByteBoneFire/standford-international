@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#FFFFFF', // Example primary color
-        'secondary': '#000000', // Example secondary color
-        'accent': '#6574cd', // Example accent color
+        'primary': '#FFFFFF', //  primary color
+        'secondary': '#000000', //  secondary color
         'button': '#28a745', // Green button color
-        'bgPrimary': '#DFDFDFCC',
-        'bgSecondary': '#71A1CD40',
+        'brand': '#0D457380', // blue color with 80% opacity
+        'bgPrimary': '#DFDFDF90', // pinks color with 90% opacity
+        'bgSecondary': '#71A1CD40', // blue color with 40% opacity
       },
       fontFamily: {
         'sans': ['Roboto', 'sans-serif'],
