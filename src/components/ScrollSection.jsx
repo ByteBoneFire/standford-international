@@ -43,17 +43,17 @@ function ScrollSection() {
         {`
         @keyframes scroll-left {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-30%); }
         }
         @keyframes scroll-right {
-          0% { transform: translateX(-50%); }
+          0% { transform: translateX(-30%); }
           100% { transform: translateX(0); }
         }
         .animate-scroll-left {
-          animation: scroll-left 50s linear infinite alternate;
+          animation: scroll-left 30s linear infinite alternate;
         }
         .animate-scroll-right {
-          animation: scroll-right 50s linear infinite alternate;
+          animation: scroll-right 30s linear infinite alternate;
         }
         .animate-scroll-left:hover,
         .animate-scroll-right:hover {
