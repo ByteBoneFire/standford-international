@@ -5,15 +5,15 @@ function ScrollSection() {
 
   return (
     <section className="scroll-section flex flex-col items-center py-10 bg-bgPrimary h-auto overflow-x-hidden">
-      <h2 data-aos="fade-down" className="text-3xl font-semibold text-black mb-4">
-        We Collaborate With <span className='text-green-300'>30+</span> Leading Colleges
+      <h2 data-aos="fade-down" className="text-3xl font-semibold text-black mb-6">
+        We Collaborate With <span className='text-green-500'>30+</span> Leading Colleges
       </h2>
     
       <div className="flex flex-col items-center gap-12 overflow-hidden">
         {/* First row scrolling left */}
         <div className="flex animate-scroll-left">
           {[...collegeImages, ...collegeImages].map((image, index) => (
-            <div key={`${image.id}-${index}`} className="flex-shrink-0 w-60 h-32 mx-4 bg-white">
+            <div key={`${image.id}-${index}`} className="flex-shrink-0 w-60 h-32 mx-6 bg-white rounded-lg">
               <img
                 src={image.src}
                 alt={image.alt}
@@ -27,7 +27,7 @@ function ScrollSection() {
         {/* Second row scrolling right */}
         <div className="flex animate-scroll-right">
           {[...collegeImages, ...collegeImages].map((image, index) => (
-            <div key={`${image.id}-${index}`} className="flex-shrink-0 w-60 h-32 mx-4 bg-white">
+            <div key={`${image.id}-${index}`} className="flex-shrink-0 w-60 h-32 mx-6 bg-white rounded-lg">
               <img
                 src={image.src}
                 alt={image.alt}

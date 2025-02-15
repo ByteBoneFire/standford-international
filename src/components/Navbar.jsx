@@ -1,16 +1,36 @@
 import React, { useState } from 'react';
-import { HiMenu, HiX } from 'react-icons/hi'; // Install with: npm install react-icons
-import { IoTrendingUpOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+//icons
+import { HiMenu, HiX } from 'react-icons/hi';
+import { IoTrendingUpOutline } from "react-icons/io5";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  // Add scroll event listener
+  React.useEffect(() => {
+    const handleScroll = () => {
+      //check if hero-section is scrolled
+      const heroSection = document.querySelector('.hero-section'); 
+      if (heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        setIsScrolled(heroBottom <= 0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  //toggle menu for mobile view
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="fixed top-0 px-4 left-0 w-full z-20 transition-colors duration-300" style={{
-      backdropFilter: 'blur(20px)',
+    <nav className={`fixed top-0 px-4 left-0 w-full z-20 transition-colors duration-300 
+      ${isScrolled ? 'bg-white' : ''}`} 
+      style={{
+        backdropFilter: isScrolled ? 'none' : 'blur(20px)',
     }}>
       <div className="container mx-auto flex items-center justify-between py-4 relative z-30">
         <div className="flex items-center">
@@ -22,14 +42,14 @@ function Navbar() {
             width={60}
             height={60}
           />
-          <Link to="/" className="text-2xl font-semibold text-white uppercase">
+          <Link to="/" className={`text-2xl font-semibold uppercase ${isScrolled ? 'text-black' : 'text-white'}`}>
             Stanford International<br />
             Consultancy
           </Link>
         </div>
         {/* for desktop view */}
         <div className="hidden lg:flex items-center space-x-6">
-          <NavLinks />
+          <NavLinks isScrolled={isScrolled} />
         </div>
 
         {/* for mobile view */}
@@ -54,8 +74,8 @@ function Navbar() {
   );
 }
 
-function NavLinks({ mobile }) {
-  const linkClass = `hover:text-accent uppercase font-semibold  ${mobile ? 'text-lg text-black' : 'text-white'}`;
+function NavLinks({ mobile, isScrolled }) {
+  const linkClass = `hover:text-blue-500 uppercase font-semibold ${mobile ? 'text-lg text-black' : (isScrolled ? 'text-black' : 'text-white')}`;
   const buttonClass = `bg-button hover:bg-green-700 text-black font-bold py-3 px-5 rounded-lg ${
     mobile ? 'w-48 text-center mt-4' : 'ml-12'
   }`;
@@ -67,7 +87,7 @@ function NavLinks({ mobile }) {
       <Link to="/services" className={linkClass}>Services</Link>
       <Link to="/blogs" className={linkClass}>Blogs</Link>
       <Link to="/contact" className={linkClass}>Contact</Link>
-      <Link to="/contact" className={`${buttonClass} flex items-end gap-2`}>
+      <Link to="/contact" className={`${buttonClass} flex items-end gap-1`}>
         Get Consulting <IoTrendingUpOutline className='' size={30}/>
       </Link>
     </>

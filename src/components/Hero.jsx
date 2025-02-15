@@ -5,7 +5,7 @@ import {IoTrendingUpOutline} from "react-icons/io5";
 
 function Hero() {
   return (
-    <section className="hero h-screen relative">
+    <section className="hero-section h-screen relative">
       {/* Blurred background div */}
       <div
         className="absolute inset-0"
@@ -75,7 +75,7 @@ function Hero() {
           to={'/about'}
           data-aos="fade-up"
           data-aos-delay="400"
-          className="bg-button hover:bg-green-700 text-black font-bold py-3 px-6 rounded-lg w-fit flex items-end gap-2"
+          className="bg-button hover:bg-green-700 text-black font-bold py-3 px-5 rounded-lg w-fit flex items-end gap-1"
         >
           Learn More <IoTrendingUpOutline size={30}/>
         </Link>
