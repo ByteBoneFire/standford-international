@@ -25,18 +25,18 @@ const serviceData = [
 
 function ServiceSection() {
   return (
-    <section className="service-section px-20 py-12 bg-secondary">
+    <section className="service-section py-12 bg-secondary">
       <div className="container mx-auto">
         <h2 data-aos="fade-up" className="text-2xl font-semibold text-primary text-center mb-8">
           Providing Best Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-wrap mx-auto justify-center gap-8">
           {serviceData.map((service, index) => (
             <div
               data-aos="fade-up"
               data-aos-delay={index * 200}
               key={index}
-              className="flex flex-col justify-between bg-white rounded-lg shadow-md px-10 py-6"
+              className="w-[320px] flex flex-col justify-between bg-white rounded-lg shadow-md px-10 py-6"
             >
              
               <h3 className="flex items-center gap-2 text-xl font-semibold text-secondary mb-2"> {service.icon} {service.title}</h3>

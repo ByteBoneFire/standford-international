@@ -15,7 +15,7 @@ function Hero() {
   },[])
 
   return (
-    <section className="hero-section h-screen relative">
+    <section className="sm:mt-20 hero-section h-screen relative">
       {/* Blurred background div */}
       <div
         className="absolute inset-0"
@@ -23,7 +23,7 @@ function Hero() {
           backgroundImage: `url('/assets/hero_section.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(0.9)',
+          filter: 'brightness(0.7)',
         }}
       ></div>
 
@@ -31,11 +31,11 @@ function Hero() {
       <div className="absolute inset-0 bg-black opacity-20"></div>
 
       {/* Content container - no blur */}
-      <div className="container mx-auto text-start relative z-10 px-20 flex flex-col justify-center h-full">
-        <h1 data-aos="fade-up" className="text-5xl font-bold text-white mb-3">
-          Get An Easy Way To <br /> <span id='career-writer'>Manage Your Career</span>
+      <div className="container mx-auto text-start relative z-10 max-sm:px-5 md:px-20 flex flex-col justify-center h-full">
+        <h1 data-aos="fade-up" className="max-sm:text-3xl md:text-5xl font-bold text-white mb-3">
+          Get An Easy Way To <br /> <span className='text-button drop-shadow-lg' id='career-writer'>Manage Your Career</span>
         </h1>
-        <p data-aos="fade-up" data-aos-delay="200" className="text-xl text-gray-200 mb-8">
+        <p data-aos="fade-up" data-aos-delay="200" className="max-sm:text-sm md:text-xl text-gray-300 mb-8">
           Helping students achieve their dreams through expert guidance.
         </p>
         <div data-aos="fade-up" data-aos-delay="300" className="flex mb-8 items-center">
@@ -63,15 +63,17 @@ function Hero() {
             height={60}
             loading='lazy'
           />
-          <p className="text-3xl ml-3 mt-3 w-32 font-semibold text-black leading-none">
-           100K+<br/>
-            <span className="text-sm">Happy Students</span>
+          <p className=" ml-3 w-32 font-semibold text-gray-400 leading-none">
+          <span className="max-sm:text-xl md:text-4xl">100K+</span>
+          <br></br>
+            <span className="max-sm:text-[8px] md:text-sm">Happy Students</span>
           </p>
 
-          <h6 className="text-6xl mt-3 text-black ">|</h6>
+          <h6 className="max-sm:text-5xl md:text-6xl mt-3 text-gray-400">|</h6>
 
-          <p className="text-4xl mt-3 ml-9 w-64  font-semibold container text-black leading-none">
-           4.5/5 <span className="text-sm text-black-300">Rating</span> <br />
+          <p className="max-sm:ml-2 md:ml-5 w-64 font-semibold container text-gray-400 leading-none">
+          <span className="max-sm:text-xl md:text-4xl">4.5/5 </span>
+           <span className="max-sm:text-[8px] md:text-sm text-black-300">Rating</span> <br />
            <span className='flex'>
              <MdStar className='text-yellow-500' size={20}/>
              <MdStar className='text-yellow-500' size={20}/>
@@ -85,7 +87,7 @@ function Hero() {
           to={'/about'}
           data-aos="fade-up"
           data-aos-delay="400"
-          className="bg-button hover:bg-green-500 text-black font-bold py-3 px-5 rounded-lg w-fit flex items-end gap-1"
+          className="bg-button hover:bg-green-500 text-black font-bold py-3 px-5 rounded-lg w-fit flex items-end gap-1 transition duration-300"
         >
           Learn More <IoTrendingUpOutline size={24}/>
         </Link>
