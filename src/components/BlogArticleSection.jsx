@@ -2,7 +2,7 @@ import React from 'react';
 
 function BlogArticleSection() {
   return (
-    <section className="blog-article-section py-16 bg-blue-200">
+    <section className="blog-article-section px-20 py-16 bg-brand">
       <div className="container mx-auto">
         <h2 data-aos="fade-up" className="text-2xl font-semibold text-primary text-center mb-8">
           Blog/Article Section

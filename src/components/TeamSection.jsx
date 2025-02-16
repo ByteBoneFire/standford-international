@@ -2,7 +2,7 @@ import React from 'react';
 
 function TeamSection() {
   return (
-    <section className="team-section py-16 bg-pink-100">
+    <section className="team-section py-16 bg-bgPrimary">
       <div className="container mx-auto text-center">
         <h2 data-aos="fade-up" className="text-2xl font-semibold text-primary mb-4">
           Meet Our Team

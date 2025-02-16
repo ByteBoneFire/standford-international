@@ -8,7 +8,7 @@ const serviceData = [
 
 function ServiceSection() {
   return (
-    <section className="service-section py-12 bg-secondary">
+    <section className="px-20 service-section py-12 bg-brand">
       <div className="container mx-auto">
         <h2 data-aos="fade-up" className="text-2xl font-semibold text-primary text-center mb-8">
           Providing Best Services
@@ -19,11 +19,11 @@ function ServiceSection() {
               data-aos="fade-up"
               data-aos-delay={index * 200}
               key={index}
-              className="bg-white rounded-lg shadow-md p-6"
+              className="flex flex-col justify-between bg-white rounded-lg shadow-md p-6"
             >
-              <h3 className="text-xl font-semibold text-primary mb-2">{service.title}</h3>
+              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-gray-600">{service.description}</p>
-              <a href={service.link} className="text-blue-500 hover:underline">
+              <a href={service.link} className=" mt-2 text-button hover:underline">
                 Learn More
               </a>
             </div>
