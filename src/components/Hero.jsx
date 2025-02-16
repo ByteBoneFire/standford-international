@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import {MdStar,MdStarHalf } from "react-icons/md";
 import { Link } from 'react-router-dom';
@@ -14,6 +15,14 @@ function Hero() {
     })
   },[])
 
+=======
+import React from 'react';
+import {MdStar,MdStarHalf } from "react-icons/md";
+import { Link } from 'react-router-dom';
+import {IoTrendingUpOutline} from "react-icons/io5";
+
+function Hero() {
+>>>>>>> 362b24ec9600fcc5a5bee34800bd824aaa006d4d
   return (
     <section className="hero-section h-screen relative">
       {/* Blurred background div */}
@@ -31,9 +40,15 @@ function Hero() {
       <div className="absolute inset-0 bg-black opacity-20"></div>
 
       {/* Content container - no blur */}
+<<<<<<< HEAD
       <div className="px-20 container mx-auto text-start relative z-10 flex flex-col justify-center h-full">
         <h1 data-aos="fade-up" className="text-5xl font-bold text-white mb-3">
           Get An Easy Way To <br /> <span id='career-writer'>Manage Your Career</span>
+=======
+      <div className="container mx-auto text-start relative z-10 flex flex-col justify-center h-full">
+        <h1 data-aos="fade-up" className="text-5xl font-bold text-white mb-3">
+          Get An Easy Way To <br /> Manage Your Career
+>>>>>>> 362b24ec9600fcc5a5bee34800bd824aaa006d4d
         </h1>
         <p data-aos="fade-up" data-aos-delay="200" className="text-xl text-gray-200 mb-8">
           Helping students achieve their dreams through expert guidance.
