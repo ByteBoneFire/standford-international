@@ -23,10 +23,14 @@ function ServiceSection() {
             >
               <h3 className="text-xl font-semibold text-primary mb-2">{service.title}</h3>
               <p >{service.title}</p>
-              <p className="text-gray-600"> {service.description} </p>
-              <a href={service.link} className="text-blue-500 hover:underline">
-                Learn More
-              </a>
+              <p className="text-gray-600"> {service.description} </p>           
+              <button class="bg-gray-100 hover:bg-green-700 text-black font-bold py-2 px-4 rounded border border-green-600 border-opacity-50">
+                <a href={service.link} 
+                // className="text-blue-500 hover:underline"
+                >
+                  Learn More
+                </a>
+              </button>
             </div>
           ))}
         </div>
