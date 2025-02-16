@@ -1,10 +1,6 @@
 import React from 'react';
 
 function TeamSection() {
-<<<<<<< HEAD
-  return (
-    <section className="team-section py-16 bg-bgPrimary">
-=======
   const teamData = [
     {
       name: 'John Doe',
@@ -24,7 +20,6 @@ function TeamSection() {
   ];
   return (
     <section className="team-section py-16 bg-pink-100">
->>>>>>> 362b24ec9600fcc5a5bee34800bd824aaa006d4d
       <div className="container mx-auto text-center">
         <h2 data-aos="fade-up" className="text-2xl font-semibold text-primary mb-4">
           Meet Our Team
@@ -33,8 +28,6 @@ function TeamSection() {
           Experience Team Members
         </p>
         <div className="flex justify-center space-x-4">
-<<<<<<< HEAD
-=======
 
         </div>
         <div className="container mx-auto py-12">
@@ -57,7 +50,6 @@ function TeamSection() {
     </div>
 
         {/* <div className="flex justify-center space-x-4">
->>>>>>> 362b24ec9600fcc5a5bee34800bd824aaa006d4d
           <img
             data-aos="fade-up"
             src="https://via.placeholder.com/150" // Replace with your image URL
@@ -78,11 +70,7 @@ function TeamSection() {
             alt="Team Member 3"
             className="rounded-full shadow-md"
           />
-<<<<<<< HEAD
-        </div>
-=======
         </div> */}
->>>>>>> 362b24ec9600fcc5a5bee34800bd824aaa006d4d
       </div>
     </section>
   );
