@@ -5,7 +5,7 @@ function ScrollSection() {
 
   return (
     <section className="scroll-section flex flex-col items-center py-10 bg-bgPrimary h-auto overflow-x-hidden">
-      <h2 data-aos="fade-down" className="text-3xl font-semibold text-black mb-6">
+      <h2 data-aos="fade-down" className="max-sm:text-md md:text-3xl font-semibold text-black mb-6">
         We Collaborate With <span className='text-green-500'>30+</span> Leading Colleges
       </h2>
     
@@ -50,10 +50,10 @@ function ScrollSection() {
           100% { transform: translateX(0); }
         }
         .animate-scroll-left {
-          animation: scroll-left 30s linear infinite alternate;
+          animation: scroll-left 60s linear infinite;
         }
         .animate-scroll-right {
-          animation: scroll-right 30s linear infinite alternate;
+          animation: scroll-right 60s linear infinite;
         }
         .animate-scroll-left:hover,
         .animate-scroll-right:hover {
