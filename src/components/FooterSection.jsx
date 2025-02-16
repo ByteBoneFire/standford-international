@@ -8,15 +8,15 @@ function FooterSection() {
           <div>
             <h3 className="text-xl font-semibold text-white">Company</h3>
             <ul>
-              <li><a href="#" className="text-gray-200 hover:underline">About Us</a></li>
-              <li><a href="#" className="text-gray-200 hover:underline">Services</a></li>
-              <li><a href="#" className="text-gray-200 hover:underline">Contact</a></li>
+              <li><a href="/about" className="text-gray-200 hover:underline">About Us</a></li>
+              <li><a href="/services" className="text-gray-200 hover:underline">Services</a></li>
+              <li><a href="/contact" className="text-gray-200 hover:underline">Contact</a></li>
             </ul>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-white">Quick Links</h3>
             <ul>
-              <li><a href="#" className="text-gray-200 hover:underline">Blog</a></li>
+              <li><a href="/blogs" className="text-gray-200 hover:underline">Blog</a></li>
               <li><a href="#" className="text-gray-200 hover:underline">FAQ</a></li>
               <li><a href="#" className="text-gray-200 hover:underline">Terms</a></li>
             </ul>

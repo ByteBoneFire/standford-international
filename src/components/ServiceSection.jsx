@@ -1,9 +1,9 @@
 import React from 'react';
 
 const serviceData = [
-  { title: 'Career Counseling', description: 'Providing Best Services', link: '#' },
-  { title: 'Migration', description: 'Providing Best Services', link: '#' },
-  { title: 'Health Insurance', description: 'Providing Best Services', link: '#' },
+  { title: 'Career Counseling', description: 'Providing Best Services',title :'Career Counselling', link: '#' },
+  { title: 'Migration', description: 'Providing Best Services',title:'Migration', link: '#' },
+  { title: 'Health Insurance', description: 'Providing Best Services',Title: 'Health Insurance', link: '#' },
 ];
 
 function ServiceSection() {
@@ -22,7 +22,8 @@ function ServiceSection() {
               className="bg-white rounded-lg shadow-md p-6"
             >
               <h3 className="text-xl font-semibold text-primary mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <p >{service.title}</p>
+              <p className="text-gray-600"> {service.description} </p>
               <a href={service.link} className="text-blue-500 hover:underline">
                 Learn More
               </a>
