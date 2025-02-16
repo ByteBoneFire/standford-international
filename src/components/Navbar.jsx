@@ -101,8 +101,6 @@ function NavLinks({ mobile, isScrolled }) {
 
 export default Navbar;
 
-
-// import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 // //icons
 // import { HiMenu, HiX } from 'react-icons/hi';
@@ -199,4 +197,3 @@ export default Navbar;
 // }
 
 // export default Navbar;
-

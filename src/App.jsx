@@ -42,7 +42,7 @@ function App() {
         <Navbar />
 
         {/* Main content with padding to prevent overlap */}
-        <main className="flex-1 mt-16 p-4 h-[calc(100vh-8rem)] overflow-auto">
+        <main className="flex-1 mt-16 h-[calc(100vh-8rem)]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -60,33 +60,6 @@ function App() {
         </footer>
       </div>
     </BrowserRouter>
-
-    // <BrowserRouter>
-    //   <div 
-    //   // className="App"
-    //   >
-    //     <Navbar />
-    //     <main className="content">
-    //     <Routes>
-    //       <Route path ='/' element={<Home/>}> </Route>
-    //       <Route path ='/about' element={<About/>}> </Route>
-    //       <Route path ='/contact' element={<Contact/>}> </Route>
-
-    //     {/* 
-        
-    //     <ServiceSection />
-    //     <TeamSection />
-    //     <FounderTestimony />
-    //     <ClientsTestimony />
-    //     <BlogArticleSection />
-    //     <NewsletterSignupSection /> */}
-    //     </Routes>
-    //     </main>
-    //     {/* <Hero /> */}
-    //     <FooterSection />
-    //     <RightsReservedSection />
-    //   </div>
-    // </BrowserRouter>
   );
 }
 

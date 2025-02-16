@@ -1,9 +1,9 @@
 import React from 'react';
 
 const serviceData = [
-  { title: 'Career Counseling', description: 'Providing Best Services',title :'Career Counselling', link: '#' },
-  { title: 'Migration', description: 'Providing Best Services',title:'Migration', link: '#' },
-  { title: 'Health Insurance', description: 'Providing Best Services',Title: 'Health Insurance', link: '#' },
+  { title: 'Career Counseling', description: 'Providing Best Services', link: '#' },
+  { title: 'Migration', description: 'Providing Best Services', link: '#' },
+  { title: 'Health Insurance', description: 'Providing Best Services', link: '#' },
 ];
 
 function ServiceSection() {

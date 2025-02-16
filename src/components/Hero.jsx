@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {MdStar,MdStarHalf } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import {IoTrendingUpOutline} from "react-icons/io5";
+import Typewriter from 'typewriter-effect/dist/core'
 
 function Hero() {
+
+  useEffect(()=>{
+    new Typewriter('#career-writer',{
+      strings: ['Manage Your Career'],
+      autoStart: true,
+      loop: true
+    })
+  },[])
+
   return (
     <section className="hero-section h-screen relative">
       {/* Blurred background div */}
@@ -23,7 +33,7 @@ function Hero() {
       {/* Content container - no blur */}
       <div className="container mx-auto text-start relative z-10 flex flex-col justify-center h-full">
         <h1 data-aos="fade-up" className="text-5xl font-bold text-white mb-3">
-          Get An Easy Way To <br /> Manage Your Career
+          Get An Easy Way To <br /> <span id='career-writer'>Manage Your Career</span>
         </h1>
         <p data-aos="fade-up" data-aos-delay="200" className="text-xl text-gray-200 mb-8">
           Helping students achieve their dreams through expert guidance.
