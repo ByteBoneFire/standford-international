@@ -37,14 +37,13 @@ function     Navbar() {
           <img
             src="assets/logo.png"
             alt="Company Logo"
-            className="rounded-full mr-2"
+            className="rounded-full bg-slate-200 mr-2"
             loading='lazy'
-            width={60}
-            height={60}
+            width={50}
+            height={50}
           />
-          <Link to="/" className={`text-2xl font-semibold uppercase ${isScrolled ? 'text-black' : 'text-white'}`}>
-            Stanford International<br />
-            Consultancy
+          <Link to="/" className={`text-xl w-80 font-semibold uppercase ${isScrolled ? 'text-black' : 'text-white'}`}>
+            Stanford International Consultancy
           </Link>
         </div>
         {/* for desktop view */}
