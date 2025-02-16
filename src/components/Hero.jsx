@@ -23,7 +23,7 @@ function Hero() {
           backgroundImage: `url('/assets/hero_section.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(0.9) blur(1.5px)',
+          filter: 'brightness(0.9)',
         }}
       ></div>
 
@@ -31,7 +31,7 @@ function Hero() {
       <div className="absolute inset-0 bg-black opacity-20"></div>
 
       {/* Content container - no blur */}
-      <div className="container mx-auto text-start relative z-10 flex flex-col justify-center h-full">
+      <div className="container mx-auto text-start relative z-10 px-20 flex flex-col justify-center h-full">
         <h1 data-aos="fade-up" className="text-5xl font-bold text-white mb-3">
           Get An Easy Way To <br /> <span id='career-writer'>Manage Your Career</span>
         </h1>
@@ -68,7 +68,7 @@ function Hero() {
             <span className="text-sm">Happy Students</span>
           </p>
 
-          <h6 className="text-6xl mt-3   text-black ">|</h6>
+          <h6 className="text-6xl mt-3 text-black ">|</h6>
 
           <p className="text-4xl mt-3 ml-9 w-64  font-semibold container text-black leading-none">
            4.5/5 <span className="text-sm text-black-300">Rating</span> <br />
@@ -85,9 +85,9 @@ function Hero() {
           to={'/about'}
           data-aos="fade-up"
           data-aos-delay="400"
-          className="bg-button hover:bg-green-700 text-black font-bold py-3 px-5 rounded-lg w-fit flex items-end gap-1"
+          className="bg-button hover:bg-green-500 text-black font-bold py-3 px-5 rounded-lg w-fit flex items-end gap-1"
         >
-          Learn More <IoTrendingUpOutline size={30}/>
+          Learn More <IoTrendingUpOutline size={24}/>
         </Link>
       </div>
     </section>

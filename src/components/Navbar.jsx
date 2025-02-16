@@ -43,11 +43,11 @@ function Navbar() {
             alt="Company Logo"
             className="rounded-full mr-2"
             loading='lazy'
-            width={60}
-            height={60}
+            width={50}
+            height={50}
           />
-          <Link to="/" className={`text-2xl font-semibold uppercase ${isScrolled ? 'text-black' : 'text-white'}`}>
-            Stanford International<br />
+          <Link to="/" className={` w-[280px] text-xl font-semibold uppercase ${isScrolled ? 'text-black' : 'text-white'}`}>
+            Stanford International
             Consultancy
           </Link>
         </div>
@@ -79,8 +79,8 @@ function Navbar() {
 }
 
 function NavLinks({ mobile, isScrolled }) {
-  const linkClass = `hover:text-blue-500 uppercase font-semibold ${mobile ? 'text-lg text-black' : (isScrolled ? 'text-black' : 'text-white')}`;
-  const buttonClass = `bg-button hover:bg-green-700 text-black font-bold py-3 px-5 rounded-lg ${
+  const linkClass = `hover:text-blue-500 uppercase tracking-wider font-semibold ${mobile ? 'text-lg text-black' : (isScrolled ? 'text-black' : 'text-white')}`;
+  const buttonClass = `bg-button hover:bg-green-500 transition duration-300 text-black font-bold py-3 px-5 rounded-lg ${
     mobile ? 'w-48 text-center mt-4' : 'ml-12'
   }`;
 
@@ -92,7 +92,7 @@ function NavLinks({ mobile, isScrolled }) {
       <Link to="/blogs" className={linkClass}>Blogs</Link>
       <Link to="/contact" className={linkClass}>Contact</Link>
       <Link to="/contact" className={`${buttonClass} flex items-end gap-1`}>
-        Get Consulting <IoTrendingUpOutline size={30}/>
+        Get Consulting <IoTrendingUpOutline size={24}/>
       </Link>
     </>
   );
