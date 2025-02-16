@@ -4,9 +4,6 @@ function NewsletterSignupSection() {
   return (
     <section className="newsletter-signup-section px-20 py-16 bg-bgPrimary">
       <div className="flex flex-col items-center justify-center md:flex-row md:justify-between md:items-center  container mx-auto text-center">
-        {/* <h2 data-aos="fade-up" className="text-2xl font-semibold text-primary mb-4">
-          Newsletter Signup Section
-        </h2> */}
         <p data-aos="fade-up" className="text-gray-700 text-lg ">Stay up to date with our latest news and updates.</p>
         <form data-aos="fade-up" className="mt-4">
           <input

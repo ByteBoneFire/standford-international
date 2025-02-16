@@ -30,7 +30,6 @@ function Navbar() {
 
   return (
     <nav className={`fixed top-0 px-4 left-0 w-full z-20 transition-colors duration-300 
-      // ${isScrolled ? 'bg-white' : 'bg-gray-900'}
       ${isScrolled ? 'bg-white' : 'bg-gray-900'}
       `
     } 
@@ -93,7 +92,7 @@ function NavLinks({ mobile, isScrolled }) {
       <Link to="/blogs" className={linkClass}>Blogs</Link>
       <Link to="/contact" className={linkClass}>Contact</Link>
       <Link to="/contact" className={`${buttonClass} flex items-end gap-1`}>
-        Get Consulting <IoTrendingUpOutline className='' size={30}/>
+        Get Consulting <IoTrendingUpOutline size={30}/>
       </Link>
     </>
   );

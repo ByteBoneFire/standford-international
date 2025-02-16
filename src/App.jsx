@@ -37,12 +37,12 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen overflow-hidden">
         {/* Navbar fixed at the top */}
         <Navbar />
 
         {/* Main content with padding to prevent overlap */}
-        <main className="flex-1 mt-16 h-[calc(100vh-8rem)]">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
