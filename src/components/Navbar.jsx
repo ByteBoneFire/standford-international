@@ -46,7 +46,7 @@ function Navbar() {
             width={50}
             height={50}
           />
-          <Link to="/" className={` w-[350px] text-xl font-semibold uppercase ${isScrolled ? 'text-black' : 'text-white'}`}>
+          <Link to="/" className={` w-[280px] text-xl font-semibold uppercase ${isScrolled ? 'text-black' : 'text-white'}`}>
             Stanford International
             Consultancy
           </Link>
@@ -79,7 +79,7 @@ function Navbar() {
 }
 
 function NavLinks({ mobile, isScrolled }) {
-  const linkClass = `hover:text-blue-500 uppercase font-semibold ${mobile ? 'text-lg text-black' : (isScrolled ? 'text-black' : 'text-white')}`;
+  const linkClass = `hover:text-blue-500 uppercase tracking-wider font-semibold ${mobile ? 'text-lg text-black' : (isScrolled ? 'text-black' : 'text-white')}`;
   const buttonClass = `bg-button hover:bg-green-500 transition duration-300 text-black font-bold py-3 px-5 rounded-lg ${
     mobile ? 'w-48 text-center mt-4' : 'ml-12'
   }`;

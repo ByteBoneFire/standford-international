@@ -68,7 +68,7 @@ function Hero() {
             <span className="text-sm">Happy Students</span>
           </p>
 
-          <h6 className="text-6xl mt-3   text-black ">|</h6>
+          <h6 className="text-6xl mt-3 text-black ">|</h6>
 
           <p className="text-4xl mt-3 ml-9 w-64  font-semibold container text-black leading-none">
            4.5/5 <span className="text-sm text-black-300">Rating</span> <br />
