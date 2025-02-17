@@ -29,10 +29,10 @@ function ServiceSection() {
   return (
     <section className="service-section py-12 bg-bgSecondary">
       <div className="container mx-auto">
-        <section className='flex flex-col md:flex-row justify-between items-center mb-6'>
-          <h2 data-aos="fade-right" className="text-3xl font-bold text-secondary text-center">
+        <section className='px-4 flex flex-col md:flex-row justify-between items-center mb-6'>
+          <h2 data-aos="fade-right" className="text-3xl font-bold text-secondary">
             Providing Best Services
-            <span className='text-gray-500 text-sm ml-20 hidden md:block'>
+            <span className='text-gray-500 text-sm hidden md:block'>
               We offer a range of services to help you achieve your goals.
             </span>
           </h2>

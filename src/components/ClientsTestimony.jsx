@@ -1,34 +1,64 @@
-import React from 'react';
-import { FcRating } from "react-icons/fc";
+import React from "react";
+import { MdStar } from "react-icons/md";
 
 function ClientsTestimony() {
   return (
     <section className="clients-testimony py-16 bg-bgPrimary">
-      <div className="container mx-auto text-center">
-        <h2 data-aos="fade-up" className="text-2xl font-semibold text-secondary mb-4">
+      <div className="container mx-auto">
+        <h2
+          data-aos="fade-up"
+          className="text-2xl text-center font-semibold text-secondary mb-4"
+        >
           Clients Testimony
         </h2>
-        <p data-aos="fade-up" className="text-gray-700 mb-8">
+        <p data-aos="fade-up" className="text-center text-gray-700 mb-8">
           Check What's Our Client Say About Us
         </p>
-        <div className="flex justify-center space-x-4">
-          <div data-aos="fade-up" className="bg-white rounded-lg shadow-md p-6 w-1/4">
-          <div className='flex justify-center space-x-2'> 
-              <FcRating/>
-              <FcRating/>
-              <FcRating/>
-              <FcRating/>
+        <div className="flex gap-8 flex-wrap justify-center">
+          <div
+            data-aos="fade-up"
+            className="bg-white min-w-32 w-80 rounded-lg shadow-md p-6 space-y-2"
+          >
+            <div className="flex">
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
             </div>
-            <p>"Awesome Experience!"
-            </p>
-            <p className="text-gray-700 text-xs">The education system in Australia is widely recognized worldwide for its strong reputation, characterized by innovative, practical, and efficient teaching approaches.
+            <p className="font-semibold">"Awesome Experience!"</p>
+            <p className="text-gray-700 text-xs">
+              The education system in Australia is widely recognized worldwide for its strong reputation, practical, and efficient teaching approaches.
             </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="200" className="bg-white rounded-lg shadow-md p-6 w-1/4">
-            <p className="text-gray-700">"Great Service!"</p>
+          <div
+            data-aos="fade-up"
+            className="bg-white min-w-32 w-80 rounded-lg shadow-md p-6 space-y-2"
+          >
+            <div className="flex">
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
+            </div>
+            <p className="font-semibold">"Awesome Experience!"</p>
+            <p className="text-gray-700 text-xs">
+              The education system in Australia is widely recognized worldwide for its strong reputation, practical, and efficient teaching approaches.
+            </p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="400" className="bg-white rounded-lg shadow-md p-6 w-1/4">
-            <p className="text-gray-700">"Highly Recommend!"</p>
+          <div
+            data-aos="fade-up"
+            className="bg-white min-w-32 w-80 rounded-lg shadow-md p-6 space-y-2"
+          >
+            <div className="flex">
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
+              <MdStar className="text-yellow-500" size={20} />
+            </div>
+            <p className="font-semibold">"Awesome Experience!"</p>
+            <p className="tracking-4 leading-4 text-gray-700 text-xs">
+              The education system in Australia is widely recognized worldwide for its strong reputation, practical, and efficient teaching approaches.
+            </p>
           </div>
         </div>
       </div>
