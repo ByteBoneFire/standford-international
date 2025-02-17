@@ -15,7 +15,7 @@ function Hero() {
   },[])
 
   return (
-    <section className="sm:mt-20 hero-section h-screen relative">
+    <section className="hero-section h-screen relative">
       {/* Blurred background div */}
       <div
         className="absolute inset-0"
@@ -31,7 +31,7 @@ function Hero() {
       <div className="absolute inset-0 bg-black opacity-20"></div>
 
       {/* Content container - no blur */}
-      <div className="container mx-auto text-start relative z-10 max-sm:px-5 md:px-20 flex flex-col justify-center h-full">
+      <div className="container mx-auto text-start relative z-10 max-sm:px-5 md:px-10 lg:px-20 flex flex-col justify-center h-full">
         <h1 data-aos="fade-up" className="max-sm:text-3xl md:text-5xl font-bold text-white mb-3">
           Get An Easy Way To <br /> <span className='text-button drop-shadow-lg' id='career-writer'>Manage Your Career</span>
         </h1>
