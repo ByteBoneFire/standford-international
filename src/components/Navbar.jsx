@@ -30,10 +30,10 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 px-4 left-0 w-full z-20 transition-colors duration-300 
-      ${isScrolled ? "bg-white" : "bg-gray-900"}
+      ${isScrolled ? "bg-white" : "bg-transparent"}
       `}
       style={{
-        backdropFilter: isScrolled ? "none" : "blur(20px)",
+        backdropFilter: isScrolled ? "none" : "blur(5px)",
       }}
     >
       <div className="container mx-auto flex items-center justify-between py-4 relative z-30">
@@ -92,7 +92,7 @@ function NavLinks({ mobile, isScrolled }) {
   const linkClass = `hover:text-blue-500 uppercase tracking-wider font-semibold ${
     mobile ? "text-lg text-black" : isScrolled ? "text-black" : "text-white"
   }`;
-  const buttonClass = `bg-button hover:bg-green-500 transition duration-300 text-black font-bold py-3 px-5 rounded-lg ${
+  const buttonClass = `${isScrolled && !mobile ?'bg-button':'border border-[1px] bg-gray-100/20 border-button md:text-white'} hover:bg-green-500 transition duration-300 text-black font-bold py-3 px-5 rounded-lg ${
     mobile ? "w-48 text-center mt-4" : "ml-12"
   }`;
 
