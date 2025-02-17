@@ -11,8 +11,8 @@ export default {
         'secondary': '#000000', //  secondary color
         'button': '#28a745', // Green button color
         'brand': '#0D457380', // blue color with 80% opacity
-        'bgPrimary': '#DFDFDF90', // pinks color with 90% opacity
-        'bgSecondary': '#71A1CD40', // blue color with 40% opacity
+        'bgPrimary': '#DAA38C40', // pinks color with 40% opacity
+        'bgSecondary': '#71A1CD20', // blue color with 20% opacity
       },
       fontFamily: {
         'sans': ['Roboto', 'sans-serif'],
