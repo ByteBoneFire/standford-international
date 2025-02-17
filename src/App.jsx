@@ -15,6 +15,9 @@ import About from './components/About';
 import Home from './components/homePage/Home';
 import Contact from './components/Contact';
 import Services from './components/Services';
+import BlogPost from './components/blogPage/BlogPost';
+import BlogDetails from './components/blogPage/BlogDetails';
+import BlogList from './components/blogPage/BlogList';
 
 function App() {
   const [navBackground, setNavBackground] = useState(false);
@@ -49,6 +52,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/blogs" element={<BlogArticleSection />} />
+            <Route path="/blogs-details" element={<BlogPost />} />
+            <Route path="/" element={<BlogList />} />
+            <Route path="/blog/:id" element={<BlogDetails />} />
+
             
           </Routes>
         </main>
