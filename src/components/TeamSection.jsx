@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TeamsDetails  from '../utils/teamsDetails';
+import TeamsDetails from '../utils/teamsDetails';
 
 function TeamSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -18,7 +18,7 @@ function TeamSection() {
         <h2 data-aos="fade-up" className="text-1xl lg:text-2xl font-bold text-red-500 mb-3">
           Meet Our Teams
         </h2>
-        <p data-aos="fade-up" className="text-3xl lg:text-5xl font-bold text-Secondary mb-12">
+        <p data-aos="fade-up" className="text-3xl lg:text-4xl font-bold text-Secondary mb-12">
           Experience <br /> Team Members
         </p>
 
@@ -30,10 +30,10 @@ function TeamSection() {
             >
               {/* Group team members in sets of 3 */}
               {[...Array(totalSlides)].map((_, slideIndex) => (
-                <div key={slideIndex} className="w-full flex-shrink-0 flex gap-6">
+                <div key={slideIndex} className="w-full flex-shrink-0 flex gap-6 justify-center">
                   {TeamsDetails.slice(slideIndex * 3, slideIndex * 3 + 3).map((member, index) => (
-                    <div data-aos="fade-up" key={index} className="w-1/3 px-4">
-                      <div className="mx-auto">
+                    <div data-aos="fade-up" key={index} className="w-1/3 lg:w-1/5 px-4">
+                      <div className="mx-auto my-auto text-center">
                         <div style={{
                           position: 'relative',
                           paddingBottom: 'calc(4 / 3 * 100%)',
@@ -42,7 +42,7 @@ function TeamSection() {
                           <img
                             style={{
                               position: 'absolute',
-                              height: '90%',
+                              height: '100%',
                               width: '100%',
                               top: 0,
                               right: 0,
@@ -55,9 +55,9 @@ function TeamSection() {
                             className="rounded-lg"
                           />
                         </div>
-                        <div className="text-left mt-[-5px] lg:mt-[-40px]">
-                          <h3 className="font-bold text-red-600 text-3xl mb-1">{member.name}</h3>
-                          <p className="text-red-400 font-bold text-lg">{member.title}</p>
+                        <div className="text-left mt-[-5px]">
+                          <h3 className="font-bold text-red-600 text-md lg:text-xl mb-1">{member.name}</h3>
+                          <p className="text-red-400 lg:font-bold text-sm lg:text-md">{member.title}</p>
                         </div>
                       </div>
                     </div>
@@ -73,17 +73,32 @@ function TeamSection() {
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  currentSlide === index 
-                    ? 'bg-red-600 w-6' 
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
+                    ? 'bg-red-600 w-6'
                     : 'bg-gray-300 hover:bg-red-400'
-                }`}
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-        </div>
+        <img
+          style={{
+            position: 'absolute',
+            height: '50%',
+            width: '100%',
+            top: '100',
+            right: '500',
+            bottom: 0,
+            left: 0,
+            objectFit: 'cover',
+            zIndex:-1
+          }}
+          src='assets/DecorPic/decorpic1.png'
+          alt={''}
+          className="rounded-lg"
+        />
       </div>
+        </div>
     </section>
   );
 }
