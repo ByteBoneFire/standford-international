@@ -13,12 +13,12 @@ function TeamSection() {
   };
 
   return (
-    <section className="team-section py-16 bg-bgPrimary">
+    <section className="team-section py-8 bg-bgPrimary">
       <div className="container mx-auto px-4">
-        <h2 data-aos="fade-up" className="text-1xl lg:text-2xl font-bold text-red-500 mb-3">
+        <h2 data-aos="fade-up" className="text-1xl lg:text-2xl font-bold text-red-500 mb-2">
           Meet Our Teams
         </h2>
-        <p data-aos="fade-up" className="text-3xl lg:text-4xl font-bold text-Secondary mb-12">
+        <p data-aos="fade-up" className="text-3xl lg:text-4xl font-bold text-Secondary mb-8">
           Experience <br /> Team Members
         </p>
 
