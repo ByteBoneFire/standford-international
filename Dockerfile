@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:22-alpine
 
 WORKDIR /app
 
@@ -8,14 +8,14 @@ COPY package*.json ./
 
 RUN npm install && \
     npm install -D tailwindcss postcss autoprefixer && \
-    npm install react-router-dom react-icons
+    npm install --save react-router-dom@6.22.3 react-icons@5.0.1
 
 COPY tailwind.config.js ./
 COPY postcss.config.js ./
-# COPY vite.config.js ./
 
 COPY src/ ./src/
-# COPY public/ ./public/
+COPY assets/ ./assets/
+
 COPY index.html ./
 
 EXPOSE 5173

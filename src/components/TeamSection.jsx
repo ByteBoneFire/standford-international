@@ -82,20 +82,9 @@ function TeamSection() {
             ))}
           </div>
         <img
-          style={{
-            position: 'absolute',
-            height: '50%',
-            width: '100%',
-            top: '100',
-            right: '500',
-            bottom: 0,
-            left: 0,
-            objectFit: 'cover',
-            zIndex:-1
-          }}
           src='assets/DecorPic/decorpic1.png'
           alt={''}
-          className="rounded-lg"
+            className=" absolute h-full w-screen top-0 left-120 right-0 bottom-0 object-fit -z-10 rounded-lg"
         />
       </div>
         </div>
