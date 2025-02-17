@@ -32,7 +32,7 @@ function TeamSection() {
               {[...Array(totalSlides)].map((_, slideIndex) => (
                 <div key={slideIndex} className="w-full flex-shrink-0 flex gap-6">
                   {TeamsDetails.slice(slideIndex * 3, slideIndex * 3 + 3).map((member, index) => (
-                    <div key={index} className="w-1/3 px-4">
+                    <div data-aos="fade-up" key={index} className="w-1/3 px-4">
                       <div className="mx-auto">
                         <div style={{
                           position: 'relative',
