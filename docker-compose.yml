@@ -9,16 +9,15 @@ services:
       - "5173:5173"
     volumes:
       - ./src:/app/src
-      # - ./public:/app/public
+      - ./assets:/app/assets
       - ./index.html:/app/index.html
       - ./tailwind.config.js:/app/tailwind.config.js
       - ./postcss.config.js:/app/postcss.config.js
-      # - ./vite.config.js:/app/vite.config.js
       - /app/node_modules
     environment:
       - NODE_ENV=development
       - VITE_HOST=0.0.0.0
-    command: npm run dev -- --host
+    command: npm run dev 
     stdin_open: true
     tty: true
     restart: unless-stopped
