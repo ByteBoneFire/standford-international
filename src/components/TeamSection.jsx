@@ -1,77 +1,104 @@
-import React from 'react';
+import React, { useState } from 'react';
+import TeamsDetails from '../utils/teamsDetails';
 
 function TeamSection() {
-  const teamData = [
-    {
-      name: 'John Doe',
-      title: 'CEO',
-      image:'assets/college/college 5.png'
-    },
-    {
-      name: 'Jane Smith',
-      title: 'CTO',
-      image:'assets/college/college 4.png'
-    },
-    {
-      name: 'Mike Johnson',
-      title: 'Marketing Manager',
-      image:'assets/college/college 6.png'
-    },
-  ];
-  return (
-    <section className="team-section py-16 bg-pink-100">
-      <div className="container mx-auto text-center">
-        <h2 data-aos="fade-up" className="text-2xl font-semibold text-primary mb-4">
-          Meet Our Team
-        </h2>
-        <p data-aos="fade-up" className="text-gray-700 mb-8">
-          Experience Team Members
-        </p>
-        <div className="flex justify-center space-x-4">
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-        </div>
-        <div className="container mx-auto py-12">
-      <h2 className="text-3xl font-bold text-center mb-8">Meet Our Team</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {teamData.map((member, index) => (
-          <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-            <img
-              className="w-full h-64 object-cover"
-              src={member.image || 'https://via.placeholder.com/300'} // Placeholder for missing images
-              alt={member.name}
-            />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">{member.name}</div>
-              <p className="text-gray-700 text-base">{member.title}</p>
+
+  // Calculate the number of slides needed (TeamsDetails.length / 3, rounded up)
+  const totalSlides = Math.ceil(TeamsDetails.length / 3);
+
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+  };
+
+  return (
+    <section className="team-section py-8 bg-bgPrimary">
+      <div className="container mx-auto px-4">
+        <h2 data-aos="fade-up" className="text-1xl lg:text-2xl font-bold text-red-500 mb-2">
+          Meet Our Teams
+        </h2>
+        <p data-aos="fade-up" className="text-3xl lg:text-4xl font-bold text-Secondary mb-8">
+          Experience <br /> Team Members
+        </p>
+
+        <div className="relative">
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-300 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {/* Group team members in sets of 3 */}
+              {[...Array(totalSlides)].map((_, slideIndex) => (
+                <div key={slideIndex} className="w-full flex-shrink-0 flex gap-6 justify-center">
+                  {TeamsDetails.slice(slideIndex * 3, slideIndex * 3 + 3).map((member, index) => (
+                    <div data-aos="fade-up" key={index} className="w-1/3 lg:w-1/5 px-4">
+                      <div className="mx-auto my-auto text-center">
+                        <div style={{
+                          position: 'relative',
+                          paddingBottom: 'calc(4 / 3 * 100%)',
+                          marginBottom: '.5rem'
+                        }}>
+                          <img
+                            style={{
+                              position: 'absolute',
+                              height: '100%',
+                              width: '100%',
+                              top: 0,
+                              right: 0,
+                              bottom: 0,
+                              left: 0,
+                              objectFit: 'cover'
+                            }}
+                            src={member.image || 'https://via.placeholder.com/300x400'}
+                            alt={member.name}
+                            className="rounded-lg"
+                          />
+                        </div>
+                        <div className="text-left mt-[-5px]">
+                          <h3 className="font-bold text-red-600 text-md lg:text-xl mb-1">{member.name}</h3>
+                          <p className="text-red-400 lg:font-bold text-sm lg:text-md">{member.title}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
 
-        {/* <div className="flex justify-center space-x-4">
-          <img
-            data-aos="fade-up"
-            src="https://via.placeholder.com/150" // Replace with your image URL
-            alt="Team Member 1"
-            className="rounded-full shadow-md"
-          />
-          <img
-            data-aos="fade-up"
-            data-aos-delay="200"
-            src="https://via.placeholder.com/150" // Replace with your image URL
-            alt="Team Member 2"
-            className="rounded-full shadow-md"
-          />
-          <img
-            data-aos="fade-up"
-            data-aos-delay="400"
-            src="https://via.placeholder.com/150" // Replace with your image URL
-            alt="Team Member 3"
-            className="rounded-full shadow-md"
-          />
-        </div> */}
+          {/* Dot Navigation - now shows one dot per group of 3 */}
+          <div className="flex justify-center space-x-2 mt-8">
+            {[...Array(totalSlides)].map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
+                    ? 'bg-red-600 w-6'
+                    : 'bg-gray-300 hover:bg-red-400'
+                  }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        <img
+          style={{
+            position: 'absolute',
+            height: '50%',
+            width: '100%',
+            top: '100',
+            right: '500',
+            bottom: 0,
+            left: 0,
+            objectFit: 'cover',
+            zIndex:-1
+          }}
+          src='assets/DecorPic/decorpic1.png'
+          alt={''}
+          className="rounded-lg"
+        />
       </div>
+        </div>
     </section>
   );
 }
