@@ -8,7 +8,7 @@ function NewsletterSignupSection() {
         <form data-aos="fade-left" className="mt-4 flex items-center justify-center">
           <input
             type="email"
-            placeholder="Enter your email"
+            placeholder="@your email"
             className="rounded-md py-2 px-4 text-gray-700"
           />
           <button className="bg-button text-black py-2 px-4 rounded-md ml-2">Subscribe</button>
