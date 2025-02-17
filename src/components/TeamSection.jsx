@@ -33,12 +33,16 @@ function TeamSection() {
                 <div key={slideIndex} className="w-full flex-shrink-0 flex gap-6 justify-center">
                   {TeamsDetails.slice(slideIndex * 3, slideIndex * 3 + 3).map((member, index) => (
                     <div data-aos="fade-up" key={index} className="w-1/3 lg:w-1/5 px-4">
-                      <div className="mx-auto my-auto text-center">
-                        <div style={{
-                          position: 'relative',
-                          paddingBottom: 'calc(4 / 3 * 100%)',
-                          marginBottom: '.5rem'
-                        }}>
+                      <div className="mx-auto my-auto text-center group perspective-1000">
+                        <div 
+                          className="relative transform-gpu transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl"
+                          style={{
+                            position: 'relative',
+                            paddingBottom: 'calc(4 / 3 * 100%)',
+                            marginBottom: '.5rem',
+                            transformStyle: 'preserve-3d',
+                          }}
+                        >
                           <img
                             style={{
                               position: 'absolute',
@@ -48,11 +52,15 @@ function TeamSection() {
                               right: 0,
                               bottom: 0,
                               left: 0,
-                              objectFit: 'cover'
+                              objectFit: 'cover',
+                              backfaceVisibility: 'hidden',
                             }}
                             src={member.image || 'https://via.placeholder.com/300x400'}
                             alt={member.name}
-                            className="rounded-lg"
+                            className="rounded-lg transition-transform duration-300 ease-out"
+                          />
+                          <div 
+                            className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"
                           />
                         </div>
                         <div className="text-left mt-[-5px]">
@@ -81,6 +89,7 @@ function TeamSection() {
               />
             ))}
           </div>
+          {/* decoration pic */}
         <img
           src='assets/DecorPic/decorpic1.png'
           alt={''}

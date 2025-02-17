@@ -14,6 +14,7 @@ COPY tailwind.config.js ./
 COPY postcss.config.js ./
 
 COPY src/ ./src/
+
 COPY assets/ ./assets/
 
 COPY index.html ./
