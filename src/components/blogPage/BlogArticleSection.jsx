@@ -73,8 +73,8 @@ const BlogArticleSection = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="container mx-auto px-4 py-2" style={{ marginTop: "190px" }}>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section className=" bg-bgSecondary py-8">
+      <div data-aos="fade-up" className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentPosts.map((blog) => (
           <div
             key={blog.id}
@@ -124,7 +124,7 @@ const BlogArticleSection = () => {
           Next
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
