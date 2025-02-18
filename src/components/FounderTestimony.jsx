@@ -21,7 +21,7 @@ function FounderTestimony() {
               <span className="text-black">"</span>
             </blockquote>
             
-            <div data-aos="fade-right" className="pl-40 text-gray-600 mb-6">
+            <div data-aos="fade-right" className=" text-right text-gray-600 mb-6">
               <span className='font-semibold text-black'>- Kim Berly Hansen</span>
               <span className='text-gray-500'>, Founder & CEO</span>
             </div>
@@ -42,13 +42,13 @@ function FounderTestimony() {
           </div>
 
           {/* Image Container */}
-          <div className="hidden md:inline-block lg:inline-block w-full lg:w-2/5 h-[300px]">
+          <div className="hidden md:inline-block lg:inline-block w-full lg:w-1/5 h-[300px]">
             <img
               data-aos="fade-left"
               data-aos-delay="400"
-              src='assets/DecorPic/decorpic2.png'
+              src='assets/Teams/Team1.jpg'
               alt="Founder"
-              className="w-full h-full rounded-lg object-contain"
+              className="w-full h-full rounded-lg object-[50%_20%] object-cover"
             />
           </div>
         </div>
