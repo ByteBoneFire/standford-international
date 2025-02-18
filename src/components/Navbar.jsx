@@ -8,6 +8,9 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  
+  // Check if current route is home
+  const isHome = location.pathname === '/';
 
   // Add scroll event listener
   React.useEffect(() => {
@@ -29,9 +32,11 @@ function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 px-4 left-0 w-full z-20 transition-colors duration-300 bg-transparent"
+      className={`fixed top-0 px-4 left-0 w-full z-20 ${
+        isHome ? 'bg-bgSecondary' :'bg-transparent'
+      } transition-colors duration-300`}
       style={{
-        backdropFilter:"blur(5px)",
+        backdropFilter: "blur(5px)",
       }}
     >
       <div className="container mx-auto flex items-center justify-between py-4 relative z-30">
@@ -47,7 +52,7 @@ function Navbar() {
           <Link
             to="/"
             className={`max-sm:w-[250px] md:w-[280px] max-sm:text-md md:text-xl font-semibold uppercase ${
-              isScrolled ? "text-black" : "text-white"
+              isHome ? (isScrolled ? "text-black" : "text-white") : "text-black"
             }`}
           >
             Stanford International Consultancy
@@ -87,10 +92,13 @@ function Navbar() {
 }
 
 function NavLinks({ mobile, isScrolled }) {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  
   const linkClass = `hover:text-blue-500 uppercase tracking-wider font-semibold ${
-    mobile ? "text-lg text-black" : isScrolled ? "text-black" : "text-white"
+    mobile ? "text-lg text-black" : isHome ? (isScrolled ? "text-black" : "text-white") : "text-black"
   }`;
-  const buttonClass = `${isScrolled && !mobile ?'bg-button':'border border-[1px] bg-gray-100/20 border-button md:text-white'} hover:bg-green-500 transition duration-300 text-black font-bold py-3 px-5 rounded-lg ${
+  const buttonClass = `${isScrolled && !mobile ?'bg-button':'bg-green-500 border-button'} hover:bg-green-600 transition duration-300 text-black font-bold py-3 px-5 rounded-lg ${
     mobile ? "w-48 text-center mt-4" : "ml-12"
   }`;
 
