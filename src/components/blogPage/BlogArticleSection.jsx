@@ -59,7 +59,7 @@ const BlogArticleSection = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <section className=" bg-bgSecondary py-8">
+    <section className="pt-32 bg-bgSecondary py-8">
 
       <div className="container mx-auto">
         <section className='flex flex-col md:flex-row-reverse px-4 justify-between items-center mb-6'>

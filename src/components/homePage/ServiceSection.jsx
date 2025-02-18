@@ -40,7 +40,7 @@ function ServiceSection() {
           to={'/services'}
           data-aos="fade-left"
           data-aos-delay="400"
-          className="text-button underline hover:text-green-500 text-black font-bold px-5 py-2 rounded-lg w-fit flex items-end gap-1 transition duration-300"
+          className="text-button underline hover:text-green-500 text-black font-bold rounded-lg w-fit flex items-end gap-1 transition duration-300"
         >
           View All Services <IoTrendingUpOutline size={24}/>
         </Link>

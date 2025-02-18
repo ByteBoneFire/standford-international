@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ScrollSection from './components/ScrollSection';
-import ServiceSection from './components/ServiceSection';
-import TeamSection from './components/TeamSection';
-import FounderTestimony from './components/FounderTestimony';
-import ClientsTestimony from './components/ClientsTestimony';
 import BlogArticleSection from './components/blogPage/BlogArticleSection';
-import NewsletterSignupSection from './components/NewsletterSignupSection';
 import FooterSection from './components/FooterSection';
 import RightsReservedSection from './components/RightsReservedSection';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import About from './components/About';
-import Home from './components/homePage/Home';
+import Home from './components/homePage';
 import Contact from './components/Contact';
 import Services from './components/Services';
 import BlogPost from './components/blogPage/BlogPost';
 import BlogDetails from './components/blogPage/BlogDetails';
-import BlogList from './components/blogPage/BlogList';
 
 function App() {
   const [navBackground, setNavBackground] = useState(false);

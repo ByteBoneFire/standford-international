@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TeamsDetails from '../utils/teamsDetails';
+import TeamsDetails from '../../utils/teamsDetails';
 
 function TeamSection() {
   const [currentSlide, setCurrentSlide] = useState(0);

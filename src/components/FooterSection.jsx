@@ -6,13 +6,12 @@ const page = () => {
       <section className="footer-section py-8 bg-bgSecondary">
         <div className="container mx-auto px-4 text-secondary">
           <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-4">
-          <div>
+          <div className='max-md:col-span-2'>
           <div className='flex items-start mb-4'>
               <img className='object-contain' src={'/assets/logo.png'} width={60} height={60}/>
               <h3 className="text-xl font-semibold">Stanford International Consultancy</h3>
             </div>
               <p className="mt-2">This is the best consultancy in the world</p>
-           
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">COMPANY</h3>
