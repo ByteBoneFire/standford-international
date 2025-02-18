@@ -40,7 +40,7 @@ function ServiceSection() {
           to={'/services'}
           data-aos="fade-left"
           data-aos-delay="400"
-          className="bg-button hover:bg-green-500 text-black font-bold px-5 py-2 rounded-lg w-fit flex items-end gap-1 transition duration-300"
+          className="text-button underline hover:text-green-500 text-black font-bold rounded-lg w-fit flex items-end gap-1 transition duration-300"
         >
           View All Services <IoTrendingUpOutline size={24}/>
         </Link>
@@ -51,7 +51,7 @@ function ServiceSection() {
               data-aos="fade-up"
               data-aos-delay={index * 200}
               key={index}
-              className="w-[320px] flex flex-col justify-between bg-white rounded-lg shadow-md px-10 py-6"
+              className="w-[345px] flex flex-col justify-between bg-white rounded-lg shadow-md px-10 py-6"
             >
              
               <h3 className="flex items-center gap-2 text-xl font-semibold text-secondary mb-2"> {service.icon} {service.title}</h3>

@@ -98,7 +98,7 @@ function NavLinks({ mobile, isScrolled }) {
   const linkClass = `hover:text-blue-500 uppercase tracking-wider font-semibold ${
     mobile ? "text-lg text-black" : isHome ? (isScrolled ? "text-black" : "text-white") : "text-black"
   }`;
-  const buttonClass = `${isScrolled && !mobile ?'bg-button':'bg-green-500 border-button'} hover:bg-green-600 transition duration-300 text-black font-bold py-3 px-5 rounded-lg ${
+  const buttonClass = `${(!isHome || (isScrolled && !mobile)) ?'bg-button': 'border-button border text-white  bg-button/10'} hover:bg-green-600 transition duration-300 text-black font-bold py-3 px-5 rounded-lg ${
     mobile ? "w-48 text-center mt-4" : "ml-12"
   }`;
 

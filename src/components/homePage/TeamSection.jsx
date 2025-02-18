@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TeamsDetails from '../utils/teamsDetails';
+import TeamsDetails from '../../utils/teamsDetails';
 
 function TeamSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -30,9 +30,9 @@ function TeamSection() {
             >
               {/* Group team members in sets of 3 */}
               {[...Array(totalSlides)].map((_, slideIndex) => (
-                <div key={slideIndex} className="w-full flex-shrink-0 flex gap-6 justify-center">
+                <div key={slideIndex} className="w-full flex-shrink-0 flex max-md:gap-1 lg:gap-6 justify-center">
                   {TeamsDetails.slice(slideIndex * 3, slideIndex * 3 + 3).map((member, index) => (
-                    <div data-aos="fade-up" key={index} className="w-1/3 lg:w-1/5 px-4">
+                    <div data-aos="fade-up" key={index} className="w-1/3 lg:w-1/5 px-1 lg:px-4 py-3">
                       <div className="mx-auto my-auto text-center group perspective-1000">
                         <div 
                           className="relative transform-gpu transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl"
@@ -83,7 +83,7 @@ function TeamSection() {
                 onClick={() => handleDotClick(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
                     ? 'bg-red-600 w-6'
-                    : 'bg-gray-300 hover:bg-red-400'
+                    : 'bg-gray-400 hover:bg-red-400'
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

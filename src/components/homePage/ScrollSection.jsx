@@ -1,5 +1,5 @@
 import React from 'react';
-import  collegeImages  from '../utils/collegeImages';
+import  collegeImages  from '../../utils/collegeImages';
 
 function ScrollSection() {
 

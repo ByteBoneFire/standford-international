@@ -2,7 +2,7 @@ const TeamsDetails = [
     {
       name: 'Kim Berly Hansen',
       title: 'CEO & Co-Founder',
-      image: 'assets/Teams/Team1.jpeg'
+      image: 'assets/Teams/Team1.jpg'
     },
     {
       name: 'Berly Kim Kardian',
@@ -27,7 +27,7 @@ const TeamsDetails = [
     {
       name: 'Mike Johnson',
       title: 'Marketing Manager',
-      image: 'assets/Teams/Team1.jpeg'
+      image: 'assets/Teams/Team1.jpg'
     },
   ];
 
