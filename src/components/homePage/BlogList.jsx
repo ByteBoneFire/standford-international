@@ -4,16 +4,18 @@ import { Link } from "react-router-dom";
 import { IoTrendingUpOutline } from "react-icons/io5";
 
 const BlogList = () => {
-
   const blogs = [
     {
       id: 1,
       title: "How a Student Visa Can Boost Your Career Opportunities",
       date: "Mar 25, 2020",
       category: "University",
-      description: "Doubling my 9-5 salary several times in my career is something I never thought could happen.",
-      quote: "You can develop side-businesses, side-hustles, and hobbies that can supplement your 9-5 income.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuijY6PBz7YdTv2IwsQB2iJmBkx29awwpUSA&s"
+      description:
+        "Doubling my 9-5 salary several times in my career is something I never thought could happen.",
+      quote:
+        "You can develop side-businesses, side-hustles, and hobbies that can supplement your 9-5 income.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuijY6PBz7YdTv2IwsQB2iJmBkx29awwpUSA&s",
     },
     {
       id: 2,
@@ -80,7 +82,10 @@ const BlogList = () => {
     <section className="px-4 bg-bgSecondary py-8">
       <div className="container mx-auto">
         <section className="flex flex-col md:flex-row-reverse justify-between items-center mb-6">
-          <div data-aos="fade-right" className=" text-secondary max-md:text-center lg:text-end">
+          <div
+            data-aos="fade-right"
+            className=" text-secondary max-md:text-center lg:text-end"
+          >
             <h2 className="text-lg text-red-400">Article and Blogs</h2>
             <span className="text-secondary  block text-2xl font-bold">
               Get Every Single
@@ -122,9 +127,11 @@ const BlogList = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {" "}
             {/* Increased gap for equal spacing */}
-            {currentPosts.slice(0, 3).map((blog) => (
+            {currentPosts.slice(0, 3).map((blog, index) => (
               <div
                 key={blog.id}
+                data-aos="fade-up"
+                data-aos-delay={blog.id * 100}
                 className="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between"
                 onClick={() => navigate(`/blog/${blog.id}`)}
               >
