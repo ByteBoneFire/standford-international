@@ -17,7 +17,7 @@ function ClientsTestimony() {
         <div className="flex gap-8 flex-wrap justify-center">
           <div
             data-aos="fade-up"
-            className="bg-white min-w-32 w-80 rounded-lg shadow-md p-6 space-y-2"
+            className="bg-white min-w-[345px] w-80 rounded-lg shadow-md p-6 space-y-2"
           >
             <div className="flex">
               <MdStar className="text-yellow-500" size={20} />
@@ -32,7 +32,7 @@ function ClientsTestimony() {
           </div>
           <div
             data-aos="fade-up"
-            className="bg-white min-w-32 w-80 rounded-lg shadow-md p-6 space-y-2"
+            className="bg-white min-w-[345px] w-80 rounded-lg shadow-md p-6 space-y-2"
           >
             <div className="flex">
               <MdStar className="text-yellow-500" size={20} />
@@ -47,7 +47,7 @@ function ClientsTestimony() {
           </div>
           <div
             data-aos="fade-up"
-            className="bg-white min-w-32 w-80 rounded-lg shadow-md p-6 space-y-2"
+            className="bg-white min-w-[345px] w-80 rounded-lg shadow-md p-6 space-y-2"
           >
             <div className="flex">
               <MdStar className="text-yellow-500" size={20} />
