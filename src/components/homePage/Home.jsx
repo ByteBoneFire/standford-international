@@ -7,6 +7,7 @@ import BlogArticleSection from '../blogPage/BlogArticleSection'
 import NewsletterSignupSection from '../NewsletterSignupSection'
 import Hero from '../Hero'
 import ScrollSection from '../ScrollSection'
+import BlogList from '../blogPage/BlogList'
 
 const Home = () => {
     return (
@@ -17,7 +18,8 @@ const Home = () => {
             <TeamSection />
             <FounderTestimony />
             <ClientsTestimony />
-            <BlogArticleSection />
+            {/* <BlogArticleSection /> */}
+            <BlogList/>
             <NewsletterSignupSection />
         </div>
     )
