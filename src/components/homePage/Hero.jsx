@@ -3,6 +3,8 @@ import {MdStar,MdStarHalf } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import {IoTrendingUpOutline} from "react-icons/io5";
 import Typewriter from 'typewriter-effect/dist/core'
+import hero from '/assets/hero_section.jpg'
+import logo from '/assets/logo.png';
 
 function Hero() {
 
@@ -20,7 +22,7 @@ function Hero() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `url('/assets/hero_section.jpg')`,
+          backgroundImage: `url(${hero})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.7)',
@@ -40,7 +42,7 @@ function Hero() {
         </p>
         <div data-aos="fade-up" data-aos-delay="300" className="flex mb-8 items-center">
           <img
-            src="assets/logo.png"
+            src={logo}
             alt="Company Logo"
             className="rounded-full mr-[-30px]"
             width={60}
@@ -48,7 +50,7 @@ function Hero() {
             loading='lazy'
           />
           <img
-            src="assets/logo.png"
+            src={logo}
             alt="Company Logo"
             className="rounded-full mr-[-30px]"
             width={60}
@@ -56,7 +58,7 @@ function Hero() {
             loading='lazy'
           />
           <img
-            src="assets/logo.png"
+            src={logo}
             alt="Company Logo"
             className="rounded-full "
             width={60}

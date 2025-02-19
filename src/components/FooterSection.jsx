@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import logo from '/assets/logo.png';
 
 
 const page = () => {
@@ -8,7 +9,7 @@ const page = () => {
           <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-4">
           <div className='max-md:col-span-2'>
           <div className='flex items-start mb-4'>
-              <img className='object-contain' src={'/assets/logo.png'} width={60} height={60}/>
+              <img className='object-contain' src={logo} width={60} height={60}/>
               <h3 className="text-xl font-semibold">Stanford International Consultancy</h3>
             </div>
               <p className="mt-2">This is the best consultancy in the world</p>

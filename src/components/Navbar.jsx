@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { IoTrendingUpOutline } from "react-icons/io5";
 
+import logo from '/assets/logo.png';
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +44,7 @@ function Navbar() {
       <div className="container mx-auto flex items-center justify-between py-4 relative z-30">
         <div className="flex items-center">
           <img
-            src="assets/logo.png"
+            src={logo}
             alt="Company Logo"
             className="rounded-full mr-2"
             loading="lazy"

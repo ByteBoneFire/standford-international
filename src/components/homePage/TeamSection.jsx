@@ -89,12 +89,6 @@ function TeamSection() {
               />
             ))}
           </div>
-          {/* decoration pic */}
-        <img
-          src='assets/DecorPic/decorpic1.png'
-          alt={''}
-            className=" absolute h-full w-screen top-0 left-120 right-0 bottom-0 object-fit -z-10 rounded-lg"
-        />
       </div>
         </div>
     </section>

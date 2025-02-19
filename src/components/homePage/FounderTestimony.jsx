@@ -1,4 +1,6 @@
 import React from 'react';
+import decor1 from '/assets/DecorPic/decorpic1.png';
+import founder from '/assets/Teams/Team1.jpg';
 
 function FounderTestimony() {
   const stats = [
@@ -46,7 +48,7 @@ function FounderTestimony() {
             <img
               data-aos="fade-left"
               data-aos-delay="400"
-              src='assets/Teams/Team1.jpg'
+              src={founder}
               alt="Founder"
               className="w-full h-full rounded-lg object-[50%_20%] object-cover"
             />
@@ -57,9 +59,9 @@ function FounderTestimony() {
         <img
           data-aos="fade-up"
           data-aos-delay="500"
-          src='assets/DecorPic/decorpic1.png'
+          src={decor1}
           alt=""
-          className="absolute h-full w-full top-0 left-0 right-0 bottom-0 object-cover -z-10 rounded-lg opacity-50"
+          className="absolute h-full w-full top-0 left-0 right-0 bottom-0 object-cover -z-1 rounded-lg opacity-50"
         />
       </div>
     </section>

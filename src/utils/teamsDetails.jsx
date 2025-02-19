@@ -1,33 +1,36 @@
+import team1 from '/assets/Teams/Team1.jpg'
+import  team2 from '/assets/Teams/Team2.jpg'
+import  team3 from '/assets/Teams/Team3.jpg'
 const TeamsDetails = [
     {
       name: 'Kim Berly Hansen',
       title: 'CEO & Co-Founder',
-      image: 'assets/Teams/Team1.jpg'
+      image: team1,
     },
     {
       name: 'Berly Kim Kardian',
       title: 'COO & Co-Founder',
-      image: 'assets/Teams/Team2.jpg'
+      image: team2
     },
     {
       name: 'Berly Yum Kardian',
       title: 'Senior Consultant',
-      image: 'assets/Teams/Team3.jpg'
+      image: team3
     },
     {
       name: 'John Doe',
       title: 'Consutling',
-      image: 'assets/Teams/Team3.jpg'
+      image: team3
     },
     {
       name: 'Jane Smith',
       title: 'COO & Marketing Officer',
-      image: 'assets/Teams/Team2.jpg'
+      image: team2
     },
     {
       name: 'Mike Johnson',
       title: 'Marketing Manager',
-      image: 'assets/Teams/Team1.jpg'
+      image: team1
     },
   ];
 
