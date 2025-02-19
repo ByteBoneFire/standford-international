@@ -1,5 +1,4 @@
 import React from 'react';
-
 const servicesData = [
   {
     title: 'Business Consulting',
@@ -16,7 +15,7 @@ const servicesData = [
 ];
 
 function Services() {
-  return (
+    return (
     <section className="services bg-gray-100 py-24">
       <div className="container mx-auto">
         <h2 data-aos="fade-up" className="text-3xl font-semibold text-primary text-center mb-12">

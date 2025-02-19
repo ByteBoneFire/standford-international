@@ -33,7 +33,7 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 px-4 left-0 w-full z-20 ${
-        isHome ? 'bg-bgSecondary' :'bg-transparent'
+        isHome ? '' :'bg-transparent'
       } transition-colors duration-300`}
       style={{
         backdropFilter: "blur(5px)",

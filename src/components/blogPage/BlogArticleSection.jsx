@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { IoTrendingUpOutline } from 'react-icons/io5';
-
+import NewsletterSignupSection from '../homePage/NewsletterSignupSection';
 const BlogArticleSection = () => {
   // const blogs = [
   //   { id: 1, title: "Blog 1", date: "2025-02-01", content: "This is the content of Blog 1." },
@@ -59,7 +59,8 @@ const BlogArticleSection = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <section className="pt-32 bg-bgSecondary py-8">
+    <>
+    <section className="pt-32 bg-bgSecondary py-24">
 
       <div className="container mx-auto">
         <section className='flex flex-col md:flex-row-reverse px-4 justify-between items-center mb-6'>
@@ -97,6 +98,8 @@ const BlogArticleSection = () => {
         </div>
       </div>
     </section>
+    <NewsletterSignupSection />
+    </>
   );
 };
 

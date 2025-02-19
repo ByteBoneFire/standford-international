@@ -7,15 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#FFFFFF', //  primary color
-        'secondary': '#000000', //  secondary color
-        'button': '#28a745', // Green button color
-        'brand': '#0D457390', // blue color with 80% opacity
-        'bgPrimary': '#DAA38C40', // pinks color with 40% opacity
-        'bgSecondary': '#71A1CD20', // blue color with 20% opacity
+        'primary': '#3490dc', // Vibrant blue for primary elements
+        'secondary': '#f59e0b', // Soft Gold/Amber for highlights - UPDATED
+        'accent': '#fc8181',   // Red accent for calls to action
+        'button': '#28a745',    // Green button color (remains)
+        'brand': '#0D4573',     // Stronger blue brand color
+        'bgPrimary': '#f0f4f8', // Light gray background
+        'bgSecondary': '#e2e8f0', // Slightly darker gray for sections
       },
       fontFamily: {
-        'sans': ['Roboto', 'sans-serif'],
+        'sans': ['"Nunito Sans"', 'sans-serif'], // Modern, readable font
+        'serif': ['"Merriweather"', 'serif'],     // For headings or special text
       },
     },
   },
