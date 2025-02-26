@@ -12,17 +12,17 @@ const reserveSectionIcon = [
 function RightsReservedSection() {
    
   return (
-    <section className="rights-reserved-section py-4 bg-bgPrimary text-secondary text-center">
+    <section className="rights-reserved-section py-4 bg-bgPrimary text-center">
       <div className="container mx-auto flex justify-between">
         <div>
-          <p>&copy; 2023 All rights reserved. <span className='text-secondary'>Stanford International.&nbsp;</span><span>Powered by &nbsp;</span><span className='italic underline text-brand'>ByteBoneFire</span></p>
+          <p>&copy; 2025 All rights reserved. <span className='text-brand hover:text-secondary cursor-pointer'>Stanford International.&nbsp;</span><span>Powered by &nbsp;</span><span className='italic underline text-brand'>ByteBoneFire</span></p>
         </div>
         <div className="flex justify-center gap-6 mb-4">
           {
             reserveSectionIcon.map((item, index)=>{
               return(
                 <>
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
                     <item.icons size={24} />
                   </a>
                 </>
@@ -30,9 +30,6 @@ function RightsReservedSection() {
             })
 
           }
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">
-            <FaInstagram size={24} />
-          </a>
           
         </div>
         {/* <div className="flex justify-center gap-6 mb-4">
