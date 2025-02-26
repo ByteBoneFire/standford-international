@@ -42,20 +42,20 @@ const footerData = [
 
 const Footer = () => {
   return (
-    <section className="footer-section py-8 bg-bgSecondary">
-      <div className="container mx-auto px-4 text-black">
-        <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-4">
-          <div className='max-md:col-span-2'>
+    <section className="footer-section py-8 bg-bgSecondary text-black">
+      <div className="container mx-auto px-4">
+        <div data-aos="fade-up" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          <div className='col-span-1 md:col-span-2 lg:col-span-1'>
             <div className='flex items-start mb-4'>
               <img className='object-contain' src={logo} width={60} height={60} alt="Logo" />
-              <h3 className="text-xl font-semibold">Stanford International Consultancy</h3>
+              <h3 className="text-xl font-semibold ml-2">Stanford International Consultancy</h3>
             </div>
-            <p className="mt-2">This is the best consultancy in the world</p>
+            <p className="mt-2 text-sm">This is the best consultancy in the world</p>
           </div>
           {footerData.map((section, index) => (
-            <div key={index}>
-              <h3 className="text-xl font-semibold mb-4">{section.title}</h3>
-              <ul className='m-2 space-y-2'>
+            <div key={index} className="text-sm">
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <ul className='space-y-2'>
                 {section.links.map((link, idx) => (
                   <li key={idx}>
                     <a href={link.url} className="hover:text-secondary transition-colors hover:underline">{link.name}</a>
@@ -71,6 +71,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 
 
