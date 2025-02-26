@@ -59,6 +59,42 @@ const blogPostList = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQgm6xksZ4a_wGPHmlHWno8xbC4XGbOCsgXzGHNkGgA&s",
   },
+  {
+    id: 6,
+    title: "Role of graduate visa in my career",
+    date: "Feb 10, 2025",
+    category: "Graduate Visa",
+    description: "Design systems are essential for ensuring consistency and scalability in large projects.",
+    quote: "A solid design system can dramatically reduce design debt and improve team collaboration.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQgm6xksZ4a_wGPHmlHWno8xbC4XGbOCsgXzGHNkGgA&s"
+  },
+  {
+    id: 7,
+    title: "Role of graduate visa in my career",
+    date: "Feb 10, 2025",
+    category: "Graduate Visa",
+    description: "Design systems are essential for ensuring consistency and scalability in large projects.",
+    quote: "A solid design system can dramatically reduce design debt and improve team collaboration.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQgm6xksZ4a_wGPHmlHWno8xbC4XGbOCsgXzGHNkGgA&s"
+  },
+  {
+    id: 8,
+    title: "Role of graduate visa in my career",
+    date: "Feb 10, 2025",
+    category: "Graduate Visa",
+    description: "Design systems are essential for ensuring consistency and scalability in large projects.",
+    quote: "A solid design system can dramatically reduce design debt and improve team collaboration.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQgm6xksZ4a_wGPHmlHWno8xbC4XGbOCsgXzGHNkGgA&s"
+  },
+  {
+    id: 9,
+    title: "Role of graduate visa in my career",
+    date: "Feb 10, 2025",
+    category: "Graduate Visa",
+    description: "Design systems are essential for ensuring consistency and scalability in large projects.",
+    quote: "A solid design system can dramatically reduce design debt and improve team collaboration.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQgm6xksZ4a_wGPHmlHWno8xbC4XGbOCsgXzGHNkGgA&s"
+  }
 ];
 
 const BlogDetails = () => {
