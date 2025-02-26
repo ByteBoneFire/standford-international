@@ -133,7 +133,7 @@ const BlogList = () => {
                 key={blog.id}
                 data-aos="fade-up"
                 data-aos-delay={blog.id * 100}
-                className="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between"
+                className="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between cursor-pointer"
                 onClick={() => navigate(`/blog/${blog.id}`)}
               >
                 {" "}
