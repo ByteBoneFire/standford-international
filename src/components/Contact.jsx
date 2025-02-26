@@ -1,10 +1,42 @@
 import React from 'react';
 import NewsletterSignupSection from './homePage/NewsletterSignupSection';
+import { FaLocationDot } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+// import address from '.././assets/address.jpg'
+
+
 function Contact() {
   return (
     <>
-    <section className="contact bg-bgSecondary py-24">
+    <section className="contact bg-bgSecondary py-24">  
       <div className="container mx-auto my-auto">
+      <div className='flex justify-around gap-4'>
+        <div className='flex items-center gap-4'>
+          <FaLocationDot/>
+          <div>
+            <p> Visit us</p>
+            <span>34 Madison Street </span>
+            <span>ny, usa </span>
+          </div>
+        </div>
+        <div className='flex items-center gap-2'>
+          <FaPhoneAlt/>
+          <div>
+            <p> Visit us</p>
+            <span>34 Madison Street </span>
+            <span>ny, usa </span>
+          </div>
+        </div>
+        <div className='flex items-center gap-2'>
+          <MdEmail/>
+          <div>
+            <p> Visit us</p>
+            <span>34 Madison Street </span>
+            <span>ny, usa </span>
+          </div>
+        </div>
+      </div>
         <h2 data-aos="fade-up" className="text-3xl font-semibold text-primary text-center mb-12">
           Contact Us
         </h2>
@@ -56,6 +88,15 @@ function Contact() {
             {/* <div className="md:w-2/3"></div> */}
           </div>
         </form>
+
+        <div>
+        <img
+          // src={address}
+          alt="location Image"
+          className="w-full h-80 object-cover rounded-lg shadow-lg mb-6"
+        />
+
+        </div>
       </div>
     </section>
       <NewsletterSignupSection />

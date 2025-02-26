@@ -93,7 +93,8 @@ const BlogList = () => {
             </span>
           </div>
           <Link
-            to={"/blogs-details"}
+            // to={"/blogs-details"}
+            to={"/blogs"}
             data-aos="fade-left"
             data-aos-delay="400"
             className="text-button underline hover:text-green-500 text-black font-bold flex items-end gap-1 transition duration-300"
