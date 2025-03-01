@@ -1,31 +1,33 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   const allServices = [
-    { title: "Business Advice", highlighted: false },
-    { title: "Startup Business", highlighted: true },
-    { title: "Financial Advice", highlighted: false },
-    { title: "Risk Management", highlighted: false },
-    { title: "Business Advice", highlighted: false },
-    { title: "Startup Business", highlighted: true },
-    { title: "Financial Advice", highlighted: false },
-    { title: "Risk Management", highlighted: false },
-    { title: "Business Advice", highlighted: false },
-    { title: "Financial Advice", highlighted: false },
-    { title: "Financial Advice", highlighted: false },
-    { title: "Risk Management", highlighted: false },
+    {id:1, title: "Student Visa", highlighted: false, description: "Description 1 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    // {id:2,title: "Startup Business", highlighted: true, description: "If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    // {id:3,title: "Temporary Residence/Graduate Visa", highlighted: false,description: "Description 3 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    {id:4,title: "Covid Visa", highlighted: false,description: "Description 4 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    // {id:5,title: "Student Visa", highlighted: false,description: "Description 5 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    {id:6, title: "Partner Visa", highlighted: false,description: "Description 6 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    {id:7, title: "Temporary Residence/Graduate Visa", highlighted: false ,description: "Description 7 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution."},
+    // {id:8, title: "Covid Visa", highlighted: false,description: "Description 8 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    // {id:9, title: "Student Visa", highlighted: false,description: "Description 9 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    // {id:10, title: "Temporary Residence/Graduate Visa", highlighted: false,description: "Description 10 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    // {id:11, title: "Temporary Residence/Graduate Visa", highlighted: false,description: "Description 11 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    // {id:12, title: "Covid Visa", highlighted: false,description: "Description 12 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    {id:13, title: "Parent Visa", highlighted: false,description: "Description 12 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
   ];
 
   const allProjects = [
-    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQgm6xksZ4a_wGPHmlHWno8xbC4XGbOCsgXzGHNkGgA&s", title: "Business Strategy", date: "April 30, 2023", category: "Business", link: "#" },
-    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuijY6PBz7YdTv2IwsQB2iJmBkx29awwpUSA&s"
-      , title: "Business Strategy", date: "April 30, 2023", category: "Business", link: "#" },
-    { image: "/mnt/data/image.png", title: "Business Strategy", date: "April 30, 2023", category: "Business", link: "#" },
+    {id:1, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfQgm6xksZ4a_wGPHmlHWno8xbC4XGbOCsgXzGHNkGgA&s", title: "Covid Visa", date: "April 30, 2023", category: "Covid Visa", link: "#",description: "Description 1 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    { id:2, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuijY6PBz7YdTv2IwsQB2iJmBkx29awwpUSA&s"
+      , title: "Student Visa", date: "April 30, 2023", category: "Student Visa", link: "#",description: "Description 1 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    {id:3,  image: "/mnt/data/image.png", title: "Student Visa", date: "April 30, 2023", category: "Student Visa", link: "#",description: "Description 1 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
 
 
-    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiy_Up-17RyznF2bYNYUrhlhH8Xr1DAvLkxg&s", title: "Startup Growth", date: "March 10, 2023", category: "Startup", link: "#" },
-    { image: "/mnt/data/image.png", title: "Investment Planning", date: "February 5, 2023", category: "Finance", link: "#" },
-    { image: "/mnt/data/image.png", title: "Risk Assessment", date: "January 20, 2023", category: "Risk", link: "#" },
+    {id:4, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiy_Up-17RyznF2bYNYUrhlhH8Xr1DAvLkxg&s", title: "Temporary Residence/ Graduate Visa", date: "March 10, 2023", category: "Temporary Residence/ Graduate Visa", link: "#",description: "Description 1 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution." },
+    {id:5, image: "/mnt/data/image.png", title: "Partner Visa", date: "February 5, 2023", category: "Partner Visa", link: "#" ,description: "Description 1 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution."},
+    {id:6, image: "/mnt/data/image.png", title: "Parent Visa", date: "January 20, 2023", category: "Parent Visa", link: "#" ,description: "Description 1 If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution.If you are an international student looking to study in Australia, the Student Visa Subclass 500 is the primary visa option for you. This visa allows you to undertake a full-time course of study in Australia at an eligible educational institution."},
   ];
 
   const [filter, setFilter] = useState("All");
@@ -39,11 +41,11 @@ export default function Services() {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-6 py-12 mt-12">
       {/* Services Section */}
-      <h2 className="text-orange-500 text-sm font-semibold">We Provide The Best Service For Consulting</h2>
-      <h1 className="text-3xl font-bold mt-2 mb-6">We Provide The Best Service For Consulting</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* <h2 className="text-orange-500 text-sm font-semibold">We Provide The Best Service For Consulting</h2>
+      <h1 className="text-3xl font-bold mt-2 mb-6">We Provide The Best Service For Consulting</h1> */}
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {allServices.map((service, index) => (
           <div
             key={index}
@@ -60,11 +62,19 @@ export default function Services() {
                 service.highlighted ? "bg-white text-black" : "bg-black text-white"
               } absolute bottom-4 right-4`}
             >
-              →
+             <Link
+              to={`/services-details/${service.id}`}
+              state={{ service }} // ✅ Pass service data correctly
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+               → 
+              </Link>
+              
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Why Choose Us Section */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -89,8 +99,11 @@ export default function Services() {
       </div>
 
       {/* Projects Section */}
-      <h2 className="text-orange-500 text-sm font-semibold mt-12">Project & Case Studies</h2>
-      <h1 className="text-3xl font-bold mt-2 mb-6">Let's Look At Our Global Projects</h1>
+      {/* <h2 className="text-orange-500 text-sm font-semibold mt-12">Project & Case Studies</h2>
+      <h1 className="text-3xl font-bold mt-2 mb-6">Let's Look At Our Global Projects</h1> */}
+      <h2 className="text-orange-500 text-sm font-semibold">We Provide The Best Service For Consulting</h2>
+      <h1 className="text-3xl font-bold mt-2 mb-6">We Provide The Best Service For Consulting</h1>
+
 
       {/* Filter & Sort Controls */}
       <div className="flex justify-between items-center mb-6">
@@ -100,7 +113,7 @@ export default function Services() {
           value={filter}
         >
           <option value="All">All Categories</option>
-          {["Business", "Startup", "Finance", "Risk"].map((category, i) => (
+          {["Temporary Residence/ Graduate Visa", "Covid Visa", "Parent Visa", "Student Visa","Partner Visa"].map((category, i) => (
             <option key={i} value={category}>{category}</option>
           ))}
         </select>
@@ -120,7 +133,21 @@ export default function Services() {
             <div className="p-6">
               <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-500 text-sm">{project.date} • {project.category}</p>
-              <a href={project.link} className="text-black font-bold mt-4 block">Read more →</a>
+              <Link
+              to={`/services-details/${project.id}`}
+              // state={{ service: project }}
+              state={{
+                service: project,
+                filter,
+                sortAsc,
+                filteredProjects,
+              }}
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              Read more → 
+              </Link>
+              {/* <a href={project.link} className="text-black font-bold mt-4 block">Read more →</a> */}
             </div>
           </div>
         ))}
@@ -148,14 +175,14 @@ export default function Services() {
 
 // export default function Services() {
 //   const services = [
-//     { title: "Business Advice", highlighted: false },
+//     { title: "Student Visa", highlighted: false },
 //     { title: "Startup Business", highlighted: true },
-//     { title: "Financial Advice", highlighted: false },
-//     { title: "Risk Management", highlighted: false },
-//     { title: "Business Advice", highlighted: false },
-//     { title: "Financial Advice", highlighted: false },
-//     { title: "Financial Advice", highlighted: false },
-//     { title: "Risk Management", highlighted: false },
+//     { title: "Temporary Residence/Graduate Visa", highlighted: false },
+//     { title: "Covid Visa", highlighted: false },
+//     { title: "Student Visa", highlighted: false },
+//     { title: "Temporary Residence/Graduate Visa", highlighted: false },
+//     { title: "Temporary Residence/Graduate Visa", highlighted: false },
+//     { title: "Covid Visa", highlighted: false },
 //   ];
 //   const projects = [
 //     { image: "/mnt/data/image.png", title: "Why your client needs a responsive website", date: "April 30, 2023", category: "Business", link: "#" },

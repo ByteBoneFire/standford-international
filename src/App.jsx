@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Services from './components/Services';
 import BlogPost from './components/blogPage/BlogPost';
 import BlogDetails from './components/blogPage/BlogDetails';
+import ServiceDetails from './components/servicePage/ServiceDetails';
 
 function App() {
   const [navBackground, setNavBackground] = useState(false);
@@ -47,6 +48,9 @@ function App() {
             <Route path="/blogs-details" element={<BlogPost />} />
             {/* <Route path="/" element={<BlogList />} /> */}
             <Route path="/blog/:id" element={<BlogDetails />} />
+
+            {/* Service section */}
+            <Route path = "/services-details/:id"  element={<ServiceDetails/>}/>
 
             
           </Routes>
